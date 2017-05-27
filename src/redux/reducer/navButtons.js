@@ -9,7 +9,6 @@ const increment = ( state ,nav ) => {
 }
 
 export default function navButtons(state = {}, action) {
-  debugger
     if (action.type === navButtonClick) {
       return increment(state, action.page)
     }
