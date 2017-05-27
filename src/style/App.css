@@ -22,3 +22,26 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.nav-bar {
+  padding: 5px 10px;
+  display: block;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-bar > ul  {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.nav-bar li  {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 2px;
+}
