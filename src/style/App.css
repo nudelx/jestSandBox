@@ -5,12 +5,14 @@
     top: 0;
     /* Rotate the text 20 degrees but keep it close to the viewer */
     transform: rotateX(20deg) translateZ(0);
+
   }
   100% {
     /* This is a magic number, but using a big one to make sure the text is fully off the screen at the end */
-    top: -1500px;
+    top: -250px;
     /* Slightly increasing the rotation at the end and moving the text far away from the viewer */
     transform: rotateX(25deg) translateZ(-2500px);
+    transform: perspective(300px) rotateX(20deg);
 
   }
 }
@@ -105,10 +107,15 @@
   color: #fdc739;
   font-family: sans-serif;
   font-size: 18px;
+  overflow: hidden;
+  transform:perspective(300px) rotateX(20deg);
+}
+
+.animation {
   position: relative;
   top: -20px;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+  animation: crawl 30s infinite;
 }
 
 .movie-data-bottom {

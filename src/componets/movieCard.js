@@ -7,10 +7,13 @@ const MovieCard = ({movie, page}) => {
       <Logo />
       <div className='movie-title'>{movie.data.title}</div>
       <div className='movie-data'>
-        {movie.data.opening_crawl}
+        <div className='animation'>
+          {movie.data.opening_crawl}
+        </div>
       </div>
       <div className='movie-data-bottom'>
         <div>Director: {movie.data.director} </div>
+        <div>{movie.data.release_date} </div>
       </div>
     </div>
   )
