@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../logo.svg';
 import '../style/App.css';
 const Header = ({ txt }) => {
+  debugger
   txt = txt || 'Welcome to React'
   return (
     <div className="App-header">
