@@ -9,7 +9,6 @@ const NavigatorContainer = (props) => {
   )
 }
 
-
 const mapDispatchToProps = (dispatch) => {
   return {
     onClick: page => dispatch(NavButtonActionsCreator.createNavButtonClick(page))
