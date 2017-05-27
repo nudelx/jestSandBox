@@ -1,4 +1,6 @@
 import React from 'react'
+import MovieCard from './movieCard'
+import EmptyCard from './emptyCard'
 
 const PageContent = ({ content }) => {
   debugger
@@ -6,10 +8,8 @@ const PageContent = ({ content }) => {
     <div className="page-content">
         {
           content.currentPage
-          ? <div> {content.currentPage} </div>
-          : <p className="App-intro">
-              To get started, edit <code>src/App.js</code> and save to reload.
-            </p>
+          ? <MovieCard page={content.currentPage} movieData={content.movieData} />
+          : <EmptyCard />
         }
     </div>
   )
