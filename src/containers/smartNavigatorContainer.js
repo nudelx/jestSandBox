@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import Nav from '../componets/navigator.js'
 import NavButtonActionsCreator from '../redux/action/navButtonAction.js'
@@ -19,11 +19,11 @@ const mapDispatchToProps = (dispatch) => {
   const fetchingMoviewProcess = (page) => {
     const movieNum = page.split('_')[1]
 
-    dispatch(MovieActionsCreator.startGettingMovie(movieNum))
+    dispatch(MovieActionsCreator.startGettingMovie(page))
 
     tryGetMovie(movieNum)
-    .then((data) => dispatch(MovieActionsCreator.getMovieDone(data, movieNum)))
-    .catch(error => dispatch(MovieActionsCreator.getMovieError(error, movieNum)))
+    .then((data) => dispatch(MovieActionsCreator.getMovieDone(data, page)))
+    .catch(error => dispatch(MovieActionsCreator.getMovieError(error, page)))
   }
 
   return {
