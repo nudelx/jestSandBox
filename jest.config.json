@@ -1,0 +1,10 @@
+{
+
+  "verbose": true,
+  "collectCoverage": true,
+  "collectCoverageFrom" : ["**/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"],
+  "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+
+}
