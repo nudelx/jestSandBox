@@ -6,7 +6,10 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "enzyme": "^2.8.2",
+    "enzyme-to-json": "^1.5.1",
     "identity-obj-proxy": "^3.0.0",
+    "jest-babel-istanbul": "^0.1.0",
+    "object-to-json": "^0.0.5",
     "react-addons-test-utils": "^15.5.1",
     "react-scripts": "1.0.7",
     "react-test-renderer": "^15.5.4"
