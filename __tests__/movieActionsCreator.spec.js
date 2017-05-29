@@ -1,26 +1,27 @@
 import { stateProcessor } from '../src/redux/reducer/helpers/movieStateProcessor'
 import  { MovieFetching, MovieFetchDone, MovieFetchError } from  '../src/redux/action/actionsType'
 import enzymeSerializer from 'enzyme-to-json/serializer';
+import MovieActionsCreator from '../src/redux/action/movieActionCreator'
 
-const actionObject = { error: 'bla bla bla ' , page:'test_1', movie: {test_movie: 'test_movie'} }
-
-describe('it should process the state', () => {
+const page  = 'page_1'
+const movie = { movie: 'test movie '}
+const error = 'this is a test error'
+describe('it create actions propertly', () => {
 
   it('MovieFetching', () => {
     expect.addSnapshotSerializer(enzymeSerializer)
-    const state = stateProcessor[MovieFetching]({}, actionObject)
+    const state = MovieActionsCreator.startGettingMovie(page)
     expect(state).toMatchSnapshot()
   })
 
-  it('MovieFetchDone', () => {
+  it('getMovieDone', () => {
     expect.addSnapshotSerializer(enzymeSerializer)
-    const state = stateProcessor[MovieFetchDone]({}, actionObject)
+    const state = MovieActionsCreator.getMovieDone(movie,page)
     expect(state).toMatchSnapshot()
   })
-
-  it('MovieFetchError', () => {
+  it('getMovieError', () => {
     expect.addSnapshotSerializer(enzymeSerializer)
-    const state = stateProcessor[MovieFetchError]({}, actionObject)
+    const state = MovieActionsCreator.getMovieError(error)
     expect(state).toMatchSnapshot()
   })
 })

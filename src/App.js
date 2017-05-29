@@ -4,12 +4,27 @@ import Header from './componets/header'
 import ContentConteiner from './containers/contentConteiner'
 import NavigatorContainer from './containers/smartNavigatorContainer'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk';
 import reducer from './redux/reducer/index'
+
+const middleware  = [thunk]
+const composeEnhancers =
+  typeof window === 'object' &&
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+    }) : compose;
+
+const enhancer = composeEnhancers(
+  applyMiddleware(...middleware),
+  // other store enhancers if any
+);
+
+
 
 let store = createStore(
   reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  enhancer
 )
 
 export default class App extends  Component {

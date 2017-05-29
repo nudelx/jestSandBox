@@ -24,7 +24,8 @@
     "object-to-json": "^0.0.5",
     "react-addons-test-utils": "^15.5.1",
     "react-scripts": "1.0.7",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.5.4",
+    "redux-thunk": "^2.2.0"
   },
   "dependencies": {
     "babel-jest": "^20.0.3",

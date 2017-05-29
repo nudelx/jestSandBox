@@ -2,36 +2,19 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Nav from '../componets/navigator.js'
 import NavButtonActionsCreator from '../redux/action/navButtonAction.js'
-import MovieActionsCreator from '../redux/action/movieActionCreator.js'
-import MovieAPI from '../helper/getMovie'
-
+import { fetchingMoviewProcess } from '../redux/action/movieActionCreator.js'
 
 const NavigatorContainer = (props) => {
-  return (
-    <Nav onClick={props.onClick} />
-  )
+  const onCLick = (page) => {
+    props.fetchingMoviewProcess(page)
+    props.createNavButtonClick(page)
+  }
+  return ( <Nav onClick={onCLick} /> )
 }
 
-const mapDispatchToProps = (dispatch) => {
-
-  const tryGetMovie = (movieNum) => movieNum && MovieAPI.fetch(`http://swapi.co/api/films/${movieNum}`)
-
-  const fetchingMoviewProcess = (page) => {
-    const movieNum = page.split('_')[1]
-
-    dispatch(MovieActionsCreator.startGettingMovie(page))
-
-    tryGetMovie(movieNum)
-    .then((data) => dispatch(MovieActionsCreator.getMovieDone(data, page)))
-    .catch(error => dispatch(MovieActionsCreator.getMovieError(error, page)))
-  }
-
-  return {
-    onClick: page => {
-      fetchingMoviewProcess(page)
-      dispatch(NavButtonActionsCreator.createNavButtonClick(page))
-    }
-  }
+const mapDispatchToProps = {
+  fetchingMoviewProcess,
+  createNavButtonClick: NavButtonActionsCreator.createNavButtonClick,
 }
 
 export default connect( null, mapDispatchToProps)(NavigatorContainer)

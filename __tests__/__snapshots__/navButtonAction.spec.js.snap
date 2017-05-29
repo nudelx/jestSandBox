@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should create navigation action  NavButtonActionsCreator 1`] = `
+Object {
+  "page": "page_1",
+  "type": "NAV_BUTTON::CLICK",
+}
+`;
