@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should process the state MovieFetchDone 1`] = `
+Object {
+  "test_1": Object {
+    "data": Object {
+      "test_movie": "test_movie",
+    },
+    "status": "DONE",
+  },
+}
+`;
+
+exports[`it should process the state MovieFetchError 1`] = `
+Object {
+  "test_1": Object {
+    "data": null,
+    "err": "bla bla bla ",
+    "status": "FAIL",
+  },
+}
+`;
+
+exports[`it should process the state MovieFetching 1`] = `
+Object {
+  "test_1": Object {
+    "data": null,
+    "status": "FETTCHING",
+  },
+}
+`;
