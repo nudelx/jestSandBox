@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`full logo test should match the dom presentation snapshot 1`] = `
+<Logo>
+  <div
+    className="sw-logo"
+  />
+</Logo>
+`;
+
+exports[`full logo test should match the dom presentation snapshot Ω  1`] = `
+<Logo>
+  <div
+    className="sw-logo"
+  />
+</Logo>
+`;
