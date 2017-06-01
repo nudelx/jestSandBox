@@ -54,7 +54,7 @@ describe('it should try to get a movie', () => {
 })
 
 
-describe('fetchingMoviewProcess action', () => {
+describe('fetchingMoviewProcess in action', () => {
   beforeAll(() => dispatch.mockClear());
 
   it('should get movie for page_1', () => {
@@ -65,7 +65,8 @@ describe('fetchingMoviewProcess action', () => {
 
   it('should get an error for page_122 not found', () => {
     dispatch.mockClear()
-    return fetchingMoviewProcess(page+22)(dispatch,getState).then(() => expect(dispatch.mock.calls).toMatchSnapshot())
+    return fetchingMoviewProcess(page+22)(dispatch,getState)
+    .then(() => expect(dispatch.mock.calls).toMatchSnapshot())
   })
 
 })
