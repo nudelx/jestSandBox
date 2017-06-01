@@ -2,7 +2,6 @@
 # React - Redux - Jest
 ![redux](https://raw.githubusercontent.com/nudelx/jestSandBox/master/logo-redux.png)
 Format: ![Alt Text](url)
-![redux](https://raw.githubusercontent.com/nudelx/jestSandBox/master/logo-redux.png)
 [![react](https://img.shields.io/badge/react-redux-blue.svg?style=flat-square)]()
 [![jest](https://img.shields.io/badge/jest-mock-red.svg?style=flat-square)]()
 [![jest](https://img.shields.io/badge/js--dom-tests-green.svg?style=flat-square)]()
