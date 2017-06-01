@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`it create actions propertly MovieFetching 1`] = `
+exports[`it creates actions propertly MovieFetching 1`] = `
 Object {
   "page": "page_1",
   "type": "MOVIE::FETCHING",
 }
 `;
 
-exports[`it create actions propertly getMovieDone 1`] = `
+exports[`it creates actions propertly getMovieDone 1`] = `
 Object {
   "movie": Object {
     "movie": "test movie ",
@@ -17,9 +17,23 @@ Object {
 }
 `;
 
-exports[`it create actions propertly getMovieError 1`] = `
+exports[`it creates actions propertly getMovieError 1`] = `
 Object {
   "error": "this is a test error",
   "type": "MOVIE::FETCHING::ERROR",
+}
+`;
+
+exports[`it should try to get a movie get a movie 1 1`] = `
+Object {
+  "created": "2014-12-10 14:23:31",
+  "director": "BB-8",
+  "edited": "2015-04-11 09:46:52",
+  "episode_id": [Circular],
+  "opening_crawl": "this is a test",
+  "producer": "Kylo Ren",
+  "release_date": "1977-05-25",
+  "title": "Hope it Will work",
+  "url": "/this/is/url/to/some/movie/",
 }
 `;

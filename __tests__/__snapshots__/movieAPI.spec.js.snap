@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing movie API  should match the error 1`] = `
+Object {
+  "error": "movie with 5 not found.",
+}
+`;
+
+exports[`testing movie API  should match the snapshot 1`] = `
+Object {
+  "created": "2014-12-10 14:23:31",
+  "director": "BB-8",
+  "edited": "2015-04-11 09:46:52",
+  "episode_id": [Circular],
+  "opening_crawl": "this is a test",
+  "producer": "Kylo Ren",
+  "release_date": "1977-05-25",
+  "title": "Hope it Will work",
+  "url": "/this/is/url/to/some/movie/",
+}
+`;

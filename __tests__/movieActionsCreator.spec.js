@@ -1,12 +1,22 @@
+jest.mock('../src/helper/MovieAPI');
 import { stateProcessor } from '../src/redux/reducer/helpers/movieStateProcessor'
 import  { MovieFetching, MovieFetchDone, MovieFetchError } from  '../src/redux/action/actionsType'
 import enzymeSerializer from 'enzyme-to-json/serializer';
-import { MovieActionsCreator,  tryGetMovie }  from '../src/redux/action/movieActionCreator'
+import { MovieActionsCreator,  tryGetMovie, fetchingMoviewProcess }  from '../src/redux/action/movieActionCreator'
+
+const state = {
+  movies: {},
+  content: {},
+  currentPage: {}
+}
+const dispatch = jest.fn()
+const getState = jest.fn().mockImplementation(() => state);
 
 const page  = 'page_1'
 const movie = { movie: 'test movie '}
 const error = 'this is a test error'
-describe('it create actions propertly', () => {
+
+describe('it creates actions propertly', () => {
 
   it('MovieFetching', () => {
     expect.addSnapshotSerializer(enzymeSerializer)
@@ -26,20 +36,36 @@ describe('it create actions propertly', () => {
     expect(state).toMatchSnapshot()
   })
 
-
 })
-
 
 describe('it should try to get a movie', () => {
 
-  it('getMovieError', () => {
-    expect.addSnapshotSerializer(enzymeSerializer)
-    tryGetMovie(1).then(d => d.json()).then(d => {
-      console.log(d)
-      expect(1).toBe(1)
-    })
-
+  it('get a movie 1', () => {
+    expect.assertions(1);
+    return tryGetMovie(1)
+    .then(data => expect(data).toMatchSnapshot())
   })
 
+  it('should fail to get a movie x > 3 with error message', () => {
+    expect.assertions(1);
+    return tryGetMovie(44)
+    .catch((err) => expect(err.error).toContain('44 not found'))
+  })
+})
+
+
+describe('aaaaaa', () => {
+
+  it('bbbbb', () => {
+    dispatch.mockClear()
+    return fetchingMoviewProcess(page)(dispatch,getState).then(t => console.log(dispatch.mock.calls))
+    console.log(dispatch.mock.calls)
+  })
+
+
+  it('bbbbb', () => {
+    dispatch.mockClear()
+    return fetchingMoviewProcess(page+22)(dispatch,getState).then(t => console.log(dispatch.mock.calls))
+  })
 
 })
