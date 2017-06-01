@@ -1,5 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`fetchingMoviewProcess action bbbbb 1`] = `
+Array [
+  Array [
+    Object {
+      "page": "page_122",
+      "type": "MOVIE::FETCHING",
+    },
+  ],
+  Array [
+    Object {
+      "error": Object {
+        "error": "movie with 122 not found.",
+      },
+      "type": "MOVIE::FETCHING::ERROR",
+    },
+  ],
+]
+`;
+
+exports[`fetchingMoviewProcess action should get an error for page_122 not found 1`] = `
+Array [
+  Array [
+    Object {
+      "page": "page_122",
+      "type": "MOVIE::FETCHING",
+    },
+  ],
+  Array [
+    Object {
+      "error": Object {
+        "error": "movie with 122 not found.",
+      },
+      "type": "MOVIE::FETCHING::ERROR",
+    },
+  ],
+]
+`;
+
+exports[`fetchingMoviewProcess action should get movie for page 1 1`] = `
+Array [
+  Array [
+    Object {
+      "page": "page_1",
+      "type": "MOVIE::FETCHING",
+    },
+  ],
+  Array [
+    Object {
+      "movie": Object {
+        "created": "2014-12-10 14:23:31",
+        "director": "BB-8",
+        "edited": "2015-04-11 09:46:52",
+        "episode_id": [Circular],
+        "opening_crawl": "this is a test",
+        "producer": "Kylo Ren",
+        "release_date": "1977-05-25",
+        "title": "Hope it Will work",
+        "url": "/this/is/url/to/some/movie/",
+      },
+      "page": "page_1",
+      "type": "MOVIE::FETCHING::DONE",
+    },
+  ],
+]
+`;
+
+exports[`fetchingMoviewProcess action should get movie for page_1 1`] = `
+Array [
+  Array [
+    Object {
+      "page": "page_1",
+      "type": "MOVIE::FETCHING",
+    },
+  ],
+  Array [
+    Object {
+      "movie": Object {
+        "created": "2014-12-10 14:23:31",
+        "director": "BB-8",
+        "edited": "2015-04-11 09:46:52",
+        "episode_id": [Circular],
+        "opening_crawl": "this is a test",
+        "producer": "Kylo Ren",
+        "release_date": "1977-05-25",
+        "title": "Hope it Will work",
+        "url": "/this/is/url/to/some/movie/",
+      },
+      "page": "page_1",
+      "type": "MOVIE::FETCHING::DONE",
+    },
+  ],
+]
+`;
+
 exports[`it creates actions propertly MovieFetching 1`] = `
 Object {
   "page": "page_1",

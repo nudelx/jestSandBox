@@ -54,18 +54,18 @@ describe('it should try to get a movie', () => {
 })
 
 
-describe('aaaaaa', () => {
+describe('fetchingMoviewProcess action', () => {
+  beforeAll(() => dispatch.mockClear());
 
-  it('bbbbb', () => {
-    dispatch.mockClear()
-    return fetchingMoviewProcess(page)(dispatch,getState).then(t => console.log(dispatch.mock.calls))
+  it('should get movie for page_1', () => {
+    return fetchingMoviewProcess(page)(dispatch,getState)
+    .then(() => expect(dispatch.mock.calls).toMatchSnapshot())
     console.log(dispatch.mock.calls)
   })
 
-
-  it('bbbbb', () => {
+  it('should get an error for page_122 not found', () => {
     dispatch.mockClear()
-    return fetchingMoviewProcess(page+22)(dispatch,getState).then(t => console.log(dispatch.mock.calls))
+    return fetchingMoviewProcess(page+22)(dispatch,getState).then(() => expect(dispatch.mock.calls).toMatchSnapshot())
   })
 
 })
