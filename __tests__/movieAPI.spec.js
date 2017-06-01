@@ -8,7 +8,6 @@ describe('testing movie API ', () => {
     .then(data => expect(data.title).toEqual('Hope it Will work'));
   })
 
-
   it('should return data object with title', () => {
     expect.assertions(1);
     return MovieAPI.fetch('bla/bla/bla/1')
