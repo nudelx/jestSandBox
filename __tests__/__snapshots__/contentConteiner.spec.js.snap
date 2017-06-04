@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentConteiner mount  should render PageContent   1`] = `
+<Connect(ContentConteiner)
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <ContentConteiner
+    content="test_1"
+    dispatch={[Function]}
+    movies={
+      Object {
+        "movie": "test",
+      }
+    }
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+    storeSubscription={
+      Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      }
+    }
+  >
+    <PageContent
+      content="test_1"
+      movies={
+        Object {
+          "movie": "test",
+        }
+      }
+    >
+      <div
+        className="page-content"
+      >
+        <EmptyCard>
+          <div>
+            <div
+              className="movie-title"
+            />
+            <div
+              className="movie-data-empty"
+            />
+          </div>
+        </EmptyCard>
+      </div>
+    </PageContent>
+  </ContentConteiner>
+</Connect(ContentConteiner)>
+`;
+
+exports[`ContentConteiner test  should get props from store   1`] = `undefined`;
+
+exports[`ContentConteiner test  should render without crashing 1`] = `
+<ContentConteiner
+  content="test_1"
+  dispatch={[Function]}
+  movies={
+    Object {
+      "movie": "test",
+    }
+  }
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "notify": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "unsubscribe": null,
+    }
+  }
+/>
+`;

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`page Content test  empty card should match the snapshot with loading card 1`] = `
+<div
+  className="page-content"
+>
+  <LoadingCard />
+</div>
+`;
+
+exports[`page Content test  empty card should match the snapshot with props 1`] = `
+<div
+  className="page-content"
+>
+  <MovieCard
+    movie={
+      Object {
+        "data": Object {
+          "director": "BB-8",
+          "opening_crawl": "this is a crawl",
+          "release_date": "1/1/1970",
+          "title": "test title",
+        },
+      }
+    }
+    page="page_1"
+  />
+</div>
+`;
+
+exports[`page Content test  empty card should match the snapshot without props 1`] = `
+<div
+  className="page-content"
+>
+  <EmptyCard />
+</div>
+`;

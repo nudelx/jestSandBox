@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigator component  should have buttons with click function 1`] = `
+Array [
+  <li
+    onClick={[Function]}
+>
+    Page 1
+</li>,
+  <li
+    onClick={[Function]}
+>
+    Page 2
+</li>,
+  <li
+    onClick={[Function]}
+>
+    Page 3
+</li>,
+]
+`;
+
+exports[`Navigator component  should pass the params to the click function 1`] = `
+Array [
+  Array [
+    "page_1",
+  ],
+  Array [
+    "page_2",
+  ],
+  Array [
+    "page_3",
+  ],
+]
+`;
+
+exports[`Navigator component  should render without crashing 1`] = `
+<div
+  className="nav-bar"
+>
+  <ul>
+    <li
+      onClick={[Function]}
+    >
+      Page 1
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Page 2
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Page 3
+    </li>
+  </ul>
+</div>
+`;
