@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from './logo'
-const MovieCard = ({movie, page, sss}) => {
+const MovieCard = ({movie, page}) => {
   return (
     <div>
       <Logo />
