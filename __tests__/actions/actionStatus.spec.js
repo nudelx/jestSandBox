@@ -1,4 +1,4 @@
-import actionStatus from  '../src/redux/action/actionsType'
+import actionStatus from  '../../src/redux/action/actionsType'
 import enzymeSerializer from 'enzyme-to-json/serializer';
 
 

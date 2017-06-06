@@ -1,6 +1,6 @@
 import React from  'react'
 import { shallow, mount } from 'enzyme'
-import Logo from '../src/componets/logo'
+import Logo from '../../src/componets/logo'
 import toJson from 'enzyme-to-json';
 import enzymeSerializer from 'enzyme-to-json/serializer';
 import objectToJson from 'object-to-json';

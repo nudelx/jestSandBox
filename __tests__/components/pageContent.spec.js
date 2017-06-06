@@ -1,10 +1,10 @@
 import React from  'react'
 import { shallow, mount } from 'enzyme'
-import PageContent from '../src/componets/PageContent'
+import PageContent from '../../src/componets/PageContent'
 import toJson from 'enzyme-to-json';
 import enzymeSerializer from 'enzyme-to-json/serializer';
 import objectToJson from 'object-to-json';
-import actionStatus from '../src/redux/reducer/helpers/actionStatus'
+import actionStatus from '../../src/redux/reducer/helpers/actionStatus'
 
 const movie = {
   page_1: {

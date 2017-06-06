@@ -1,4 +1,4 @@
-import  NavButtonActionsCreator from  '../src/redux/action/navButtonAction'
+import  NavButtonActionsCreator from  '../../src/redux/action/navButtonAction'
 import enzymeSerializer from 'enzyme-to-json/serializer';
 
 

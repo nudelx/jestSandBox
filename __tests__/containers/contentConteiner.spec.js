@@ -1,8 +1,8 @@
 import React from  'react'
 import { Provider } from 'react-redux';
 import { shallow, mount } from 'enzyme'
-import ContentConteiner from '../src/containers/contentConteiner'
-import PageContent from '../src/componets/pageContent'
+import ContentConteiner from '../../src/containers/contentConteiner'
+import PageContent from '../../src/componets/pageContent'
 import toJson from 'enzyme-to-json';
 import enzymeSerializer from 'enzyme-to-json/serializer';
 import configureStore from 'redux-mock-store'

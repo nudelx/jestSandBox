@@ -1,7 +1,7 @@
 import React from  'react'
 import { Provider } from 'react-redux';
 import { shallow, mount } from 'enzyme'
-import NavigatorContainer from '../src/containers/navigatorContainer'
+import NavigatorContainer from '../../src/containers/navigatorContainer'
 import toJson from 'enzyme-to-json';
 import enzymeSerializer from 'enzyme-to-json/serializer';
 import configureStore from 'redux-mock-store'

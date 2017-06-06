@@ -1,5 +1,5 @@
-import { stateProcessor } from '../src/redux/reducer/helpers/movieStateProcessor'
-import  { MovieFetching, MovieFetchDone, MovieFetchError } from  '../src/redux/action/actionsType'
+import { stateProcessor } from '../../src/redux/reducer/helpers/movieStateProcessor'
+import  { MovieFetching, MovieFetchDone, MovieFetchError } from  '../../src/redux/action/actionsType'
 import enzymeSerializer from 'enzyme-to-json/serializer';
 
 const actionObject = { error: 'bla bla bla ' , page:'test_1', test:'eeee', movie: {test_movie: 'test_movie'} }

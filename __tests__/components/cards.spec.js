@@ -1,9 +1,9 @@
 import React from  'react'
 import { shallow, mount } from 'enzyme'
-import EmptyCard from '../src/componets/emptyCard'
-import MovieCard from '../src/componets/MovieCard'
-import LoadingCard from '../src/componets/LoadingCard'
-import Logo from '../src/componets/Logo'
+import EmptyCard from '../../src/componets/emptyCard'
+import MovieCard from '../../src/componets/MovieCard'
+import LoadingCard from '../../src/componets/LoadingCard'
+import Logo from '../../src/componets/Logo'
 import toJson from 'enzyme-to-json';
 import enzymeSerializer from 'enzyme-to-json/serializer';
 import objectToJson from 'object-to-json';

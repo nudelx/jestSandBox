@@ -1,8 +1,8 @@
-jest.mock('../src/helper/MovieAPI');
-import { stateProcessor } from '../src/redux/reducer/helpers/movieStateProcessor'
-import  { MovieFetching, MovieFetchDone, MovieFetchError } from  '../src/redux/action/actionsType'
+jest.mock('../../src/helper/MovieAPI');
+import { stateProcessor } from '../../src/redux/reducer/helpers/movieStateProcessor'
+import  { MovieFetching, MovieFetchDone, MovieFetchError } from  '../../src/redux/action/actionsType'
 import enzymeSerializer from 'enzyme-to-json/serializer';
-import { MovieActionsCreator,  tryGetMovie, fetchingMoviewProcess }  from '../src/redux/action/movieActionCreator'
+import { MovieActionsCreator,  tryGetMovie, fetchingMoviewProcess }  from '../../src/redux/action/movieActionCreator'
 
 const state = {
   movies: {},
@@ -60,7 +60,6 @@ describe('fetchingMoviewProcess in action', () => {
   it('should get movie for page_1', () => {
     return fetchingMoviewProcess(page)(dispatch,getState)
     .then(() => expect(dispatch.mock.calls).toMatchSnapshot())
-    console.log(dispatch.mock.calls)
   })
 
   it('should get an error for page_122 not found', () => {
