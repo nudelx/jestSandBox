@@ -23,17 +23,17 @@ const content = {
 }
 
 describe('page Content test ', () => {
-  it('empty card should match the snapshot without props', () => {
+  it('empty card should match the snapshot without props (empty)', () => {
     const component = shallow(<PageContent />)
     expect(toJson(component)).toMatchSnapshot()
   })
 
-  it('empty card should match the snapshot with props', () => {
+  it('empty card should match the snapshot with props (<movie>)', () => {
     const component = shallow(<PageContent content={content} movies={movie}/>)
     expect(toJson(component)).toMatchSnapshot()
   })
 
-  it('empty card should match the snapshot with loading card', () => {
+  it('empty card should match the snapshot with loading card (<loading>)', () => {
     movie.page_1.status = actionStatus.FETTCHING
     const component = shallow(<PageContent content={content} movies={movie}/>)
     expect(toJson(component)).toMatchSnapshot()

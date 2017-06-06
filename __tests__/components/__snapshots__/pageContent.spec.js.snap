@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`page Content test  empty card should match the snapshot with loading card 1`] = `
+exports[`page Content test  empty card should match the snapshot with loading card (<loading>) 1`] = `
 <div
   className="page-content"
 >
@@ -8,7 +8,7 @@ exports[`page Content test  empty card should match the snapshot with loading ca
 </div>
 `;
 
-exports[`page Content test  empty card should match the snapshot with props 1`] = `
+exports[`page Content test  empty card should match the snapshot with props (<movie>) 1`] = `
 <div
   className="page-content"
 >
@@ -28,7 +28,7 @@ exports[`page Content test  empty card should match the snapshot with props 1`] 
 </div>
 `;
 
-exports[`page Content test  empty card should match the snapshot without props 1`] = `
+exports[`page Content test  empty card should match the snapshot without props (empty) 1`] = `
 <div
   className="page-content"
 >
