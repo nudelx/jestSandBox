@@ -41,7 +41,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test_orig": "react-scripts test --env=jsdom",
-    "test": "jest",
+    "test": "./node_modules/.bin/jest --config jest.config.json",
+    "test:dev": "./node_modules/.bin/jest --config jest.config.json --watch",
+    "test:coverage": "./node_modules/.bin/jest --config jest.config.json --coverage",
     "eject": "react-scripts eject"
   }
 }
