@@ -20,8 +20,6 @@ const enhancer = composeEnhancers(
   // other store enhancers if any
 );
 
-
-
 let store = createStore(
   reducer,
   enhancer
