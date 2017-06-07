@@ -79,8 +79,6 @@ exports[`ContentConteiner mount  should render PageContent   1`] = `
 </Connect(ContentConteiner)>
 `;
 
-exports[`ContentConteiner test  should get props from store   1`] = `undefined`;
-
 exports[`ContentConteiner test  should render without crashing 1`] = `
 <ContentConteiner
   content="test_1"

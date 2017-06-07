@@ -26,7 +26,6 @@ describe('ContentConteiner test ', () => {
   it('should get props from store  ', () => {
     expect(container.prop('content')).toEqual(initialState.content)
     expect(container.prop('movies')).toEqual(initialState.movies)
-    expect(toJson(container.props())).toMatchSnapshot()
   })
 
 })
