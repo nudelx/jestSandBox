@@ -54,7 +54,7 @@ describe('it should try to get a movie', () => {
 })
 
 
-describe('fetchingMoviewProcess in action', () => {
+describe('fetchingMovieProcess in action', () => {
   beforeAll(() => dispatch.mockClear());
 
   it('should get movie for page_1', () => {

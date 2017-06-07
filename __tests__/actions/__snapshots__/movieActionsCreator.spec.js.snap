@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fetchingMoviewProcess in action should get an error for page_122 not found 1`] = `
+exports[`fetchingMovieProcess in action should get an error for page_122 not found 1`] = `
 Array [
   Array [
     Object {
@@ -19,7 +19,7 @@ Array [
 ]
 `;
 
-exports[`fetchingMoviewProcess in action should get movie for page_1 1`] = `
+exports[`fetchingMovieProcess in action should get movie for page_1 1`] = `
 Array [
   Array [
     Object {
