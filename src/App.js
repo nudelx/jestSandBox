@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style/App.css';
 import Header from './componets/header'
-import ContentConteiner from './containers/contentConteiner'
+import ContentContainer from './containers/contentContainer'
 import NavigatorContainer from './containers/navigatorContainer'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
@@ -32,7 +32,7 @@ export default class App extends  Component {
         <div className="App">
           <Header />
           <NavigatorContainer />
-          <ContentConteiner />
+          <ContentContainer />
         </div>
       </Provider>
     )

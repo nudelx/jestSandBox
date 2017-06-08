@@ -1,7 +1,7 @@
 import React from  'react'
 import { Provider } from 'react-redux';
 import { shallow, mount } from 'enzyme'
-import ContentConteiner from '../../src/containers/contentConteiner'
+import ContentContainer from '../../src/containers/ContentContainer'
 import PageContent from '../../src/componets/pageContent'
 import toJson from 'enzyme-to-json';
 import enzymeSerializer from 'enzyme-to-json/serializer';
@@ -12,11 +12,11 @@ const mockStore = configureStore()
 let store = mockStore(initialState)
 let container = null
 
-describe('ContentConteiner test ', () => {
+describe('ContentContainer test ', () => {
 
   beforeEach(()=>{
     store = mockStore(initialState)
-    container = shallow(<ContentConteiner store={store} /> )
+    container = shallow(<ContentContainer store={store} /> )
  })
 
   it('should render without crashing', () => {
@@ -30,14 +30,14 @@ describe('ContentConteiner test ', () => {
 
 })
 
-describe('ContentConteiner mount ', () => {
+describe('ContentContainer mount ', () => {
   beforeEach(()=>{
     store = mockStore(initialState)
-    container = mount(<ContentConteiner store={store}/>)
+    container = mount(<ContentContainer store={store}/>)
  })
 
   it('should render PageContent  ', () => {
-    const component = container.find(ContentConteiner)
+    const component = container.find(ContentContainer)
     expect(toJson(component)).toMatchSnapshot()
   })
 })

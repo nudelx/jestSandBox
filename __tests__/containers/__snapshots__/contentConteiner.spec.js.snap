@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContentConteiner mount  should render PageContent   1`] = `
-<Connect(ContentConteiner)
+exports[`ContentContainer mount  should render PageContent   1`] = `
+<Connect(ContentContainer)
   store={
     Object {
       "clearActions": [Function],
@@ -13,7 +13,7 @@ exports[`ContentConteiner mount  should render PageContent   1`] = `
     }
   }
 >
-  <ContentConteiner
+  <ContentContainer
     content="test_1"
     dispatch={[Function]}
     movies={
@@ -75,12 +75,12 @@ exports[`ContentConteiner mount  should render PageContent   1`] = `
         </EmptyCard>
       </div>
     </PageContent>
-  </ContentConteiner>
-</Connect(ContentConteiner)>
+  </ContentContainer>
+</Connect(ContentContainer)>
 `;
 
-exports[`ContentConteiner test  should render without crashing 1`] = `
-<ContentConteiner
+exports[`ContentContainer test  should render without crashing 1`] = `
+<ContentContainer
   content="test_1"
   dispatch={[Function]}
   movies={

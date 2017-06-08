@@ -3,9 +3,6 @@
 exports[`NavigatorContainer test  shold render dispatch double action  1`] = `
 Array [
   Array [
-    [Function],
-  ],
-  Array [
     Object {
       "page": "page_1",
       "type": "NAV_BUTTON::CLICK",
@@ -28,6 +25,9 @@ Array [
       "page": "page_3",
       "type": "NAV_BUTTON::CLICK",
     },
+  ],
+  Array [
+    [Function],
   ],
 ]
 `;
@@ -91,9 +91,6 @@ exports[`NavigatorContainer test  shold render navigator 1`] = `
 exports[`NavigatorContainer test  shold render navigator 2`] = `
 Array [
   Array [
-    [Function],
-  ],
-  Array [
     Object {
       "page": "page_1",
       "type": "NAV_BUTTON::CLICK",
@@ -116,6 +113,9 @@ Array [
       "page": "page_3",
       "type": "NAV_BUTTON::CLICK",
     },
+  ],
+  Array [
+    [Function],
   ],
 ]
 `;
