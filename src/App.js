@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './style/App.css';
 import Header from './componets/header'
 import ContentContainer from './containers/contentContainer'
-import NavigatorContainer from './containers/navigatorContainer'
+import NavigatorContainer from './containers/NavigatorContainer'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk';

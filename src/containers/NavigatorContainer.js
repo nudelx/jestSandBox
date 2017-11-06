@@ -6,6 +6,7 @@ import { fetchingMoviewProcess } from '../redux/action/movieActionCreator.js'
 
 const NavigatorContainer = (props) => {
   const onCLick = (page) => {
+    console.log('click')
     props.createNavButtonClick(page)
     props.fetchingMoviewProcess(page)
   }
