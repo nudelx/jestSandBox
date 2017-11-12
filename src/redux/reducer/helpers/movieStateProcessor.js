@@ -8,7 +8,7 @@ export const stateProcessor = {
     return {...state, [action.page]: { status: actionStatus.FETTCHING, data: null }}
   },
   [MovieFetchDone]: (state, action) => {
-    debugger
+    console.log('action', action)
     return {...state, [action.page]: { status: actionStatus.DONE, data: action.movie }}
   },
   [MovieFetchError]: (state, action) => {

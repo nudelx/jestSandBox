@@ -1,12 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Nav from '../componets/navigator.js'
-import NavButtonActionsCreator from '../redux/action/navButtonAction.js'
-import { fetchingMoviewProcess } from '../redux/action/movieActionCreator.js'
+import Nav from '../componets/navigator'
+import NavButtonActionsCreator from '../redux/action/navButtonAction'
+import { fetchingMoviewProcess } from '../redux/action/movieActionCreator'
 
 const NavigatorContainer = (props) => {
   const onCLick = (page) => {
-    console.log('click')
     props.createNavButtonClick(page)
     props.fetchingMoviewProcess(page)
   }

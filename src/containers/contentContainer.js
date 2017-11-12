@@ -8,9 +8,6 @@ const ContentContainer = ({ content, movies }) => {
   )
 }
 
-
-const mapStateToProps = (state) => {
-  return { content: state.content, movies: state.movies  }
-}
+const mapStateToProps = ({content, movies }) => ({ content, movies })
 
 export default connect(mapStateToProps, null)(ContentContainer)
