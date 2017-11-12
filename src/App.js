@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import reducer from './redux/reducer/index'
-import storeMock from './redux/reducer/helpers/mockStore'
+// import storeMock from './redux/reducer/helpers/mockStore'
 
 const saveStore = store =>
   localStorage
@@ -21,15 +21,12 @@ const composeEnhancers =
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
     : compose
 
-const enhancer = composeEnhancers(
-  applyMiddleware(...middleware)
-  // other store enhancers if any
-)
+const enhancer = composeEnhancers(applyMiddleware(...middleware))
 
-const store = createStore(reducer, storeMock, enhancer)
-store.subscribe(() => {
-  saveStore(store.getState())
-})
+const store = createStore(reducer, {}, enhancer)
+// store.subscribe(() => {
+//   saveStore(store.getState())
+// })
 
 export default class App extends Component {
   render() {
