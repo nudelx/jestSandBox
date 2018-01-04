@@ -36,7 +36,6 @@ const WithTrailerPreview = Component =>
 
     render() {
       const { show, trailer, url } = this.state;
-      console.log(this.props)
       return (
         <div>
           <Component {...this.props} />
