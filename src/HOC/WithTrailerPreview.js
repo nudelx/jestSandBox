@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react";
-import TYSearch from "youtube-api-search";
-import VideoPlayer from "../componets/videoPlayer";
+import React, { PureComponent } from "react"
+import TYSearch from "youtube-api-search"
+import VideoPlayer from "../componets/videoPlayer"
 
 const WithTrailerPreview = Component =>
   class extends PureComponent {
@@ -9,10 +9,10 @@ const WithTrailerPreview = Component =>
       show: false,
       trailer: false,
       url: false
-    };
+    }
 
     componentDidMount() {
-      const { movie } = this.props;
+      const { movie } = this.props
       TYSearch(
         { key: this.state.key, term: `star wars ${movie.data.title}` },
         videos => {
@@ -21,21 +21,21 @@ const WithTrailerPreview = Component =>
             url: `https://www.youtube.com/embed/${
               videos[0].id.videoId
             }?autoplay=1`
-          });
+          })
         }
-      );
+      )
     }
 
     hideTrailer = () => {
-      this.setState({ show: false });
-    };
+      this.setState({ show: false })
+    }
 
     showTrailer = () => {
-      this.setState({ show: true });
-    };
+      this.setState({ show: true })
+    }
 
     render() {
-      const { show, trailer, url } = this.state;
+      const { show, trailer, url } = this.state
       return (
         <div>
           <Component {...this.props} />
@@ -47,8 +47,8 @@ const WithTrailerPreview = Component =>
             </button>
           ) : null}
         </div>
-      );
+      )
     }
-  };
+  }
 
-export default WithTrailerPreview;
+export default WithTrailerPreview
