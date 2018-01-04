@@ -137,3 +137,33 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.show-trailer {
+  background-color: green;
+  color: #eee;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+.video-payer-holder {
+  background-color: #000;
+  opacity: 0.9;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding-top: 30%;
+
+}
+
+.embed-responsive-item {
+  width: 70%;
+  height: 60%;
+  background: #000;
+}

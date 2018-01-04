@@ -3,7 +3,10 @@ import MovieCard from './movieCard'
 import EmptyCard from './emptyCard'
 import LoadingCard from './loadingCard'
 import actionStatus from '../redux/reducer/helpers/actionStatus'
+import WithTrailerPreview from '../HOC/WithTrailerPreview'
 
+const MovieCardWithPreview = WithTrailerPreview(MovieCard)
+MovieCardWithPreview.displayName = 'WithTrailerPreview(MovieCard)'
 
 const PageContent = ({ content, movies }) => {
   return (
@@ -12,7 +15,7 @@ const PageContent = ({ content, movies }) => {
           movies && movies[content.currentPage]
           ? movies[content.currentPage].status === actionStatus.FETTCHING
             ? <LoadingCard />
-            : <MovieCard page={content.currentPage} movie={movies[content.currentPage]} />
+            : <MovieCardWithPreview page={content.currentPage} movie={movies[content.currentPage]} />
           : <EmptyCard />
         }
     </div>
