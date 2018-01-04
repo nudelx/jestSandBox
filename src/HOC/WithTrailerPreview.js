@@ -11,7 +11,7 @@ const WithTrailerPreview = Component =>
       url: false
     }
 
-    componentDidMount() {
+    componentDidMount () {
       const { movie } = this.props
       TYSearch(
         { key: this.state.key, term: `star wars ${movie.data.title}` },
