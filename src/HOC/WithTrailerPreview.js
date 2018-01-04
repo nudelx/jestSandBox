@@ -12,7 +12,7 @@ const WithTrailerPreview = Component =>
     };
 
     componentDidMount() {
-      const { movie } = this.props
+      const { movie } = this.props;
       TYSearch(
         { key: this.state.key, term: `star wars ${movie.data.title}` },
         videos => {
