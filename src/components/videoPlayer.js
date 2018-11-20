@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const VideoPlayer = ({ url, onClose }) => (
   <div className="video-payer-holder">
@@ -6,7 +6,7 @@ const VideoPlayer = ({ url, onClose }) => (
       <div onClick={onClose} className="video-close">
         X
       </div>
-      <iframe className="embed-responsive-item" src={url} />
+      <iframe title="video" className="embed-responsive-item" src={url} />
     </div>
   </div>
 )
