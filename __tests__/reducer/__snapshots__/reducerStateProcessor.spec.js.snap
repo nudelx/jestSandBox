@@ -25,7 +25,7 @@ exports[`it should process the state MovieFetching 1`] = `
 Object {
   "test_1": Object {
     "data": null,
-    "status": "FETTCHING",
+    "status": "FETCHING",
   },
 }
 `;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './style/App.css'
-import Header from './componets/header'
+import Header from './components/header'
 import ContentContainer from './containers/contentContainer'
 import NavigatorContainer from './containers/NavigatorContainer'
 import { Provider } from 'react-redux'
@@ -11,9 +11,8 @@ import reducer from './redux/reducer/index'
 
 const saveStore = store =>
   localStorage
-  ? localStorage.setItem('JEST_DEMO_LOCAL' ,JSON.stringify(store))
-  : null
-
+    ? localStorage.setItem('JEST_DEMO_LOCAL', JSON.stringify(store))
+    : null
 
 const middleware = [thunk]
 const composeEnhancers =

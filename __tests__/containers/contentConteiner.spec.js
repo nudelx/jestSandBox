@@ -1,23 +1,22 @@
-import React from  'react'
-import { Provider } from 'react-redux';
-import { shallow, mount } from 'enzyme'
-import ContentContainer from '../../src/containers/ContentContainer'
-import PageContent from '../../src/componets/pageContent'
-import toJson from 'enzyme-to-json';
-import enzymeSerializer from 'enzyme-to-json/serializer';
+import React from 'react'
+import Enzyme, { shallow, mount } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+import ContentContainer from '../../src/containers/contentContainer'
+import toJson from 'enzyme-to-json'
 import configureStore from 'redux-mock-store'
 
-const initialState = { content: 'test_1', movies: {movie:'test'}}
+Enzyme.configure({ adapter: new Adapter() })
+
+const initialState = { content: 'test_1', movies: { movie: 'test' } }
 const mockStore = configureStore()
 let store = mockStore(initialState)
 let container = null
 
 describe('ContentContainer test ', () => {
-
-  beforeEach(()=>{
+  beforeEach(() => {
     store = mockStore(initialState)
-    container = shallow(<ContentContainer store={store} /> )
- })
+    container = shallow(<ContentContainer store={store} />)
+  })
 
   it('should render without crashing', () => {
     expect(toJson(container)).toMatchSnapshot()
@@ -27,14 +26,13 @@ describe('ContentContainer test ', () => {
     expect(container.prop('content')).toEqual(initialState.content)
     expect(container.prop('movies')).toEqual(initialState.movies)
   })
-
 })
 
 describe('ContentContainer mount ', () => {
-  beforeEach(()=>{
+  beforeEach(() => {
     store = mockStore(initialState)
-    container = mount(<ContentContainer store={store}/>)
- })
+    container = mount(<ContentContainer store={store} />)
+  })
 
   it('should render PageContent  ', () => {
     const component = container.find(ContentContainer)

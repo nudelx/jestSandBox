@@ -47,14 +47,14 @@ Array [
 ]
 `;
 
-exports[`it creates actions propertly MovieFetching 1`] = `
+exports[`it creates actions properly MovieFetching 1`] = `
 Object {
   "page": "page_1",
   "type": "MOVIE::FETCHING",
 }
 `;
 
-exports[`it creates actions propertly getMovieDone 1`] = `
+exports[`it creates actions properly getMovieDone 1`] = `
 Object {
   "movie": Object {
     "movie": "test movie ",
@@ -64,7 +64,7 @@ Object {
 }
 `;
 
-exports[`it creates actions propertly getMovieError 1`] = `
+exports[`it creates actions properly getMovieError 1`] = `
 Object {
   "error": "this is a test error",
   "type": "MOVIE::FETCHING::ERROR",

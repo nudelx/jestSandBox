@@ -1,17 +1,17 @@
-import React, { PureComponent } from "react"
-import TYSearch from "youtube-api-search"
-import VideoPlayer from "../componets/videoPlayer"
+import React, { PureComponent } from 'react'
+import TYSearch from 'youtube-api-search'
+import VideoPlayer from '../components/videoPlayer'
 
 const WithTrailerPreview = Component =>
   class extends PureComponent {
     state = {
-      key: "AIzaSyArFE0FKjiGoX-0wKSay_riAbAemd8t63U",
+      key: 'AIzaSyArFE0FKjiGoX-0wKSay_riAbAemd8t63U',
       show: false,
       trailer: false,
       url: false
     }
 
-    componentDidMount () {
+    componentDidMount() {
       const { movie } = this.props
       TYSearch(
         { key: this.state.key, term: `star wars ${movie.data.title}` },
@@ -43,7 +43,7 @@ const WithTrailerPreview = Component =>
             <VideoPlayer url={url} onClose={this.hideTrailer} />
           ) : trailer ? (
             <button onClick={this.showTrailer} className="show-trailer">
-              {"Trailer"}
+              {'Trailer'}
             </button>
           ) : null}
         </div>

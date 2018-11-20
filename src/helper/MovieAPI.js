@@ -16,13 +16,13 @@
 const MovieAPI = {
   fetch: url => {
     if (window.fetch) {
-      return window.fetch(url)
-        .then( resp =>  resp.json())
+      return window
+        .fetch(url)
+        .then(resp => resp.json())
         .then(resp => resp)
     }
     return Promise.reject(new Error('oops'))
   }
 }
-
 
 export default MovieAPI

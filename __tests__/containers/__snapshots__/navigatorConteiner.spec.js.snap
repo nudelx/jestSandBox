@@ -37,7 +37,7 @@ exports[`NavigatorContainer test  shold render navigator 1`] = `
   store={
     Object {
       "clearActions": [Function],
-      "dispatch": [Function],
+      "dispatch": [MockFunction],
       "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
@@ -47,11 +47,11 @@ exports[`NavigatorContainer test  shold render navigator 1`] = `
 >
   <NavigatorContainer
     createNavButtonClick={[Function]}
-    fetchingMoviewProcess={[Function]}
+    fetchingMovieProcess={[Function]}
     store={
       Object {
         "clearActions": [Function],
-        "dispatch": [Function],
+        "dispatch": [MockFunction],
         "getActions": [Function],
         "getState": [Function],
         "replaceReducer": [Function],
@@ -125,7 +125,7 @@ exports[`NavigatorContainer test  should render without crashing with Nav 1`] = 
   store={
     Object {
       "clearActions": [Function],
-      "dispatch": [Function],
+      "dispatch": [MockFunction],
       "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
@@ -135,11 +135,11 @@ exports[`NavigatorContainer test  should render without crashing with Nav 1`] = 
 >
   <NavigatorContainer
     createNavButtonClick={[Function]}
-    fetchingMoviewProcess={[Function]}
+    fetchingMovieProcess={[Function]}
     store={
       Object {
         "clearActions": [Function],
-        "dispatch": [Function],
+        "dispatch": [MockFunction],
         "getActions": [Function],
         "getState": [Function],
         "replaceReducer": [Function],

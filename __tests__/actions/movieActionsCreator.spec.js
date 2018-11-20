@@ -1,23 +1,24 @@
-jest.mock('../../src/helper/MovieAPI');
-import { stateProcessor } from '../../src/redux/reducer/helpers/movieStateProcessor'
-import  { MovieFetching, MovieFetchDone, MovieFetchError } from  '../../src/redux/action/actionsType'
-import enzymeSerializer from 'enzyme-to-json/serializer';
-import { MovieActionsCreator,  tryGetMovie, fetchingMoviewProcess }  from '../../src/redux/action/movieActionCreator'
+import enzymeSerializer from 'enzyme-to-json/serializer'
+import {
+  MovieActionsCreator,
+  tryGetMovie,
+  fetchingMovieProcess
+} from '../../src/redux/action/movieActionCreator'
 
+jest.mock('../../src/helper/MovieAPI')
 const state = {
   movies: {},
   content: {},
   currentPage: {}
 }
 const dispatch = jest.fn()
-const getState = jest.fn().mockImplementation(() => state);
+const getState = jest.fn().mockImplementation(() => state)
 
-const page  = 'page_1'
-const movie = { movie: 'test movie '}
+const page = 'page_1'
+const movie = { movie: 'test movie ' }
 const error = 'this is a test error'
 
-describe('it creates actions propertly', () => {
-
+describe('it creates actions properly', () => {
   it('MovieFetching', () => {
     expect.addSnapshotSerializer(enzymeSerializer)
     const state = MovieActionsCreator.startGettingMovie(page)
@@ -26,7 +27,7 @@ describe('it creates actions propertly', () => {
 
   it('getMovieDone', () => {
     expect.addSnapshotSerializer(enzymeSerializer)
-    const state = MovieActionsCreator.getMovieDone(movie,page)
+    const state = MovieActionsCreator.getMovieDone(movie, page)
     expect(state).toMatchSnapshot()
   })
 
@@ -35,37 +36,36 @@ describe('it creates actions propertly', () => {
     const state = MovieActionsCreator.getMovieError(error)
     expect(state).toMatchSnapshot()
   })
-
 })
 
 describe('it should try to get a movie', () => {
-
   it('get a movie 1', () => {
-    expect.assertions(1);
-    return tryGetMovie(1)
-    .then(data => expect(data).toMatchSnapshot())
+    expect.assertions(1)
+    return tryGetMovie(1).then(data => expect(data).toMatchSnapshot())
   })
 
   it('should fail to get a movie x > 3 with error message', () => {
-    expect.assertions(1);
-    return tryGetMovie(44)
-    .catch((err) => expect(err.error).toContain('44 not found'))
+    expect.assertions(1)
+    return tryGetMovie(44).catch(err =>
+      expect(err.error).toContain('44 not found')
+    )
   })
 })
 
-
 describe('fetchingMovieProcess in action', () => {
-  beforeAll(() => dispatch.mockClear());
+  beforeAll(() => dispatch.mockClear())
 
   it('should get movie for page_1', () => {
-    return fetchingMoviewProcess(page)(dispatch,getState)
-    .then(() => expect(dispatch.mock.calls).toMatchSnapshot())
+    return fetchingMovieProcess(page)(dispatch, getState).then(() =>
+      expect(dispatch.mock.calls).toMatchSnapshot()
+    )
   })
 
   it('should get an error for page_122 not found', () => {
     dispatch.mockClear()
-    return fetchingMoviewProcess(page+22)(dispatch,getState)
-    .then(() => expect(dispatch.mock.calls).toMatchSnapshot())
+    expect.assertions(1)
+    return fetchingMovieProcess(page + '22')(dispatch, getState).then(() =>
+      expect(dispatch.mock.calls).toMatchSnapshot()
+    )
   })
-
 })

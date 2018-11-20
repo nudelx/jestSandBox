@@ -1,20 +1,21 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Nav from '../componets/navigator'
+import Nav from '../components/navigator'
 import NavButtonActionsCreator from '../redux/action/navButtonAction'
-import { fetchingMoviewProcess } from '../redux/action/movieActionCreator'
+import { fetchingMovieProcess } from '../redux/action/movieActionCreator'
 
-const NavigatorContainer = (props) => {
-  const onCLick = (page) => {
+const NavigatorContainer = props => {
+  const onCLick = page => {
     props.createNavButtonClick(page)
-    props.fetchingMoviewProcess(page)
+    props.fetchingMovieProcess(page)
   }
-  return ( <Nav onClick={onCLick} /> )
+  return <Nav onClick={onCLick} />
 }
 
-const mapDispatchToProps = {
-  fetchingMoviewProcess,
-  createNavButtonClick: NavButtonActionsCreator.createNavButtonClick,
-}
-
-export default connect( null, mapDispatchToProps)(NavigatorContainer)
+export default connect(
+  null,
+  {
+    fetchingMovieProcess,
+    createNavButtonClick: NavButtonActionsCreator.createNavButtonClick
+  }
+)(NavigatorContainer)

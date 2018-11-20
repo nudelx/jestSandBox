@@ -1,7 +1,7 @@
- const actionStatus = {
-  FETTCHING: 'FETTCHING',
+const actionStatus = {
+  FETCHING: 'FETCHING',
   DONE: 'DONE',
-  FAIL: 'FAIL',
+  FAIL: 'FAIL'
 }
 
 export default actionStatus

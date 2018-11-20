@@ -29,53 +29,40 @@ exports[`all cards test empty card should match the snapshot 1`] = `
 
 exports[`all cards test movie card should match the snapshot 1`] = `
 Object {
-  "movie": Object {
-    "data": Object {
-      "director": "BB-8",
-      "opening_crawl": "this is a crawl",
-      "release_date": "1/1/1970",
-      "title": "test title",
-    },
-  },
-}
-`;
-
-exports[`all cards test movie card should match the snapshot 2`] = `
-Object {
   "children": Array [
     <Logo />,
     <div
       className="movie-title"
->
+    >
       test title
-</div>,
+    </div>,
     <div
       className="movie-data"
->
+    >
       <div
-            className="animation"
+        className="animation"
       >
-            this is a crawl
+        this is a crawl
       </div>
-</div>,
+    </div>,
     <div
       className="movie-data-bottom"
->
+    >
       <div>
-            Director: 
-            BB-8
-             
+        Director: 
+        BB-8
+         
       </div>
       <div>
-            1/1/1970
-             
+        1/1/1970
+         
       </div>
-</div>,
+    </div>,
   ],
 }
 `;
 
-exports[`all cards test movie card should match the snapshot 3`] = `
+exports[`all cards test movie card should match the snapshot 2`] = `
 <div>
   <Logo />
   <div
@@ -114,44 +101,31 @@ Object {
     <Logo />,
     <div
       className="movie-title"
->
+    >
       test title
-</div>,
+    </div>,
     <div
       className="movie-data"
->
+    >
       <div
-            className="animation"
+        className="animation"
       >
-            this is a crawl
+        this is a crawl
       </div>
-</div>,
+    </div>,
     <div
       className="movie-data-bottom"
->
+    >
       <div>
-            Director: 
-            BB-8
-             
+        Director: 
+        BB-8
+         
       </div>
       <div>
-            1/1/1970
-             
+        1/1/1970
+         
       </div>
-</div>,
+    </div>,
   ],
-}
-`;
-
-exports[`all cards test movie card should match the snapshot of the props 1`] = `
-Object {
-  "movie": Object {
-    "data": Object {
-      "director": "BB-8",
-      "opening_crawl": "this is a crawl",
-      "release_date": "1/1/1970",
-      "title": "test title",
-    },
-  },
 }
 `;

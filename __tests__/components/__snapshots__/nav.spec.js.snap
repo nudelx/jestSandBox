@@ -4,19 +4,19 @@ exports[`Navigator component  should have buttons with click function 1`] = `
 Array [
   <li
     onClick={[Function]}
->
+  >
     Page 1
-</li>,
+  </li>,
   <li
     onClick={[Function]}
->
+  >
     Page 2
-</li>,
+  </li>,
   <li
     onClick={[Function]}
->
+  >
     Page 3
-</li>,
+  </li>,
 ]
 `;
 

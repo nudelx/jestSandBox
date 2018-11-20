@@ -12,7 +12,7 @@ exports[`page Content test  empty card should match the snapshot with props (<mo
 <div
   className="page-content"
 >
-  <MovieCard
+  <WithTrailerDynamic
     movie={
       Object {
         "data": Object {
@@ -23,8 +23,9 @@ exports[`page Content test  empty card should match the snapshot with props (<mo
         },
       }
     }
-    page="page_1"
-  />
+  >
+    <Component />
+  </WithTrailerDynamic>
 </div>
 `;
 
