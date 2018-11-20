@@ -1,10 +1,11 @@
-import React, { PureComponent } from 'react'
-import TYSearch from 'youtube-api-search'
-import VideoPlayer from '../components/videoPlayer'
+import React, { Component } from "react"
+import TYSearch from "youtube-api-search"
+import VideoPlayer from "../components/videoPlayer"
+import key from "../helper/keys"
 
-class WithTrailerDynamic extends PureComponent {
+class WithTrailerDynamic extends Component {
   state = {
-    key: 'AIzaSyArFE0FKjiGoX-0wKSay_riAbAemd8t63U',
+    key,
     show: false,
     trailer: false,
     url: false
@@ -42,7 +43,7 @@ class WithTrailerDynamic extends PureComponent {
           <VideoPlayer url={url} onClose={this.hideTrailer} />
         ) : trailer ? (
           <button onClick={this.showTrailer} className="show-trailer">
-            {'Trailer'}
+            {"Trailer"}
           </button>
         ) : null}
       </div>

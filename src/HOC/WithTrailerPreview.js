@@ -1,11 +1,12 @@
-import React, { PureComponent } from 'react'
-import TYSearch from 'youtube-api-search'
-import VideoPlayer from '../components/videoPlayer'
+import React from "react"
+import TYSearch from "youtube-api-search"
+import VideoPlayer from "../components/videoPlayer"
+import key from "../helper/keys"
 
 const WithTrailerPreview = Component =>
-  class extends PureComponent {
+  class extends Component {
     state = {
-      key: 'AIzaSyArFE0FKjiGoX-0wKSay_riAbAemd8t63U',
+      key,
       show: false,
       trailer: false,
       url: false
@@ -26,13 +27,9 @@ const WithTrailerPreview = Component =>
       )
     }
 
-    hideTrailer = () => {
-      this.setState({ show: false })
-    }
+    hideTrailer = () => this.setState({ show: false })
 
-    showTrailer = () => {
-      this.setState({ show: true })
-    }
+    showTrailer = () => this.setState({ show: true })
 
     render() {
       const { show, trailer, url } = this.state
@@ -43,7 +40,7 @@ const WithTrailerPreview = Component =>
             <VideoPlayer url={url} onClose={this.hideTrailer} />
           ) : trailer ? (
             <button onClick={this.showTrailer} className="show-trailer">
-              {'Trailer'}
+              {"Trailer"}
             </button>
           ) : null}
         </div>
