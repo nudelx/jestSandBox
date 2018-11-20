@@ -4,7 +4,7 @@ import VideoPlayer from "../components/videoPlayer"
 import key from "../helper/keys"
 
 const WithTrailerPreview = Component =>
-  class extends Component {
+  class extends React.Component {
     state = {
       key,
       show: false,
