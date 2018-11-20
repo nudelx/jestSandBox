@@ -1,6 +1,6 @@
 {
   "verbose": true,
-  "collectCoverage": true,
+  "collectCoverage": false,
   "collectCoverageFrom": ["src/**/*.{js,jsx}"],
   "testMatch": ["<rootDir>__tests__/**/?(*.)(spec|test).js?(x)"],
   "moduleNameMapper": {
