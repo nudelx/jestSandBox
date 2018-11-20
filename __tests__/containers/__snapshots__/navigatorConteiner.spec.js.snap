@@ -1,94 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavigatorContainer test  shold render dispatch double action  1`] = `
-Array [
-  Array [
-    Object {
-      "page": "page_1",
-      "type": "NAV_BUTTON::CLICK",
-    },
-  ],
-  Array [
-    [Function],
-  ],
-  Array [
-    Object {
-      "page": "page_2",
-      "type": "NAV_BUTTON::CLICK",
-    },
-  ],
-  Array [
-    [Function],
-  ],
-  Array [
-    Object {
-      "page": "page_3",
-      "type": "NAV_BUTTON::CLICK",
-    },
-  ],
-  Array [
-    [Function],
-  ],
-]
-`;
-
-exports[`NavigatorContainer test  shold render navigator 1`] = `
-<Connect(NavigatorContainer)
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [MockFunction],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <NavigatorContainer
-    createNavButtonClick={[Function]}
-    fetchingMovieProcess={[Function]}
-    store={
-      Object {
-        "clearActions": [Function],
-        "dispatch": [MockFunction],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      }
-    }
-  >
-    <Nav
-      onClick={[Function]}
-    >
-      <div
-        className="nav-bar"
-      >
-        <ul>
-          <li
-            onClick={[Function]}
-          >
-            Page 1
-          </li>
-          <li
-            onClick={[Function]}
-          >
-            Page 2
-          </li>
-          <li
-            onClick={[Function]}
-          >
-            Page 3
-          </li>
-        </ul>
-      </div>
-    </Nav>
-  </NavigatorContainer>
-</Connect(NavigatorContainer)>
-`;
-
-exports[`NavigatorContainer test  shold render navigator 2`] = `
+exports[`NavigatorContainer test  should render dispatch double action  1`] = `
 Array [
   Array [
     Object {
@@ -174,4 +86,92 @@ exports[`NavigatorContainer test  should render without crashing with Nav 1`] = 
     </Nav>
   </NavigatorContainer>
 </Connect(NavigatorContainer)>
+`;
+
+exports[`NavigatorContainer test  should run redux process navigator 1`] = `
+<Connect(NavigatorContainer)
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [MockFunction],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <NavigatorContainer
+    createNavButtonClick={[Function]}
+    fetchingMovieProcess={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [MockFunction],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <Nav
+      onClick={[Function]}
+    >
+      <div
+        className="nav-bar"
+      >
+        <ul>
+          <li
+            onClick={[Function]}
+          >
+            Page 1
+          </li>
+          <li
+            onClick={[Function]}
+          >
+            Page 2
+          </li>
+          <li
+            onClick={[Function]}
+          >
+            Page 3
+          </li>
+        </ul>
+      </div>
+    </Nav>
+  </NavigatorContainer>
+</Connect(NavigatorContainer)>
+`;
+
+exports[`NavigatorContainer test  should run redux process navigator 2`] = `
+Array [
+  Array [
+    Object {
+      "page": "page_1",
+      "type": "NAV_BUTTON::CLICK",
+    },
+  ],
+  Array [
+    [Function],
+  ],
+  Array [
+    Object {
+      "page": "page_2",
+      "type": "NAV_BUTTON::CLICK",
+    },
+  ],
+  Array [
+    [Function],
+  ],
+  Array [
+    Object {
+      "page": "page_3",
+      "type": "NAV_BUTTON::CLICK",
+    },
+  ],
+  Array [
+    [Function],
+  ],
+]
 `;
