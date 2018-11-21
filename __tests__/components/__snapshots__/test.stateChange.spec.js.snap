@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test react state change  should render the loading and react on button 1`] = `
+<div>
+  <div
+    className="force"
+  >
+    <div
+      className="loading"
+    >
+      wait ....
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    clickMe
+  </button>
+</div>
+`;
+
+exports[`test react state change  should render the loading and react on button 2`] = `
+Object {
+  "show": false,
+}
+`;
+
+exports[`test react state change  should render the loading and react on button 3`] = `
+<div>
+  <div
+    className="force"
+  >
+    <div
+      className="data"
+    >
+      here we go !
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    clickMe
+  </button>
+</div>
+`;
+
+exports[`test react state change  should render the loading and react on button 4`] = `
+Object {
+  "show": true,
+}
+`;
