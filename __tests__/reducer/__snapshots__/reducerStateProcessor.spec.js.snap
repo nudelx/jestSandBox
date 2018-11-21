@@ -11,13 +11,19 @@ Object {
 }
 `;
 
-exports[`it should process the state MovieFetchError 1`] = `
+exports[`it should process the state MovieFetchError + mutation test 1`] = `
 Object {
   "test_1": Object {
     "data": null,
     "err": "bla bla bla ",
     "status": "FAIL",
   },
+}
+`;
+
+exports[`it should process the state MovieFetchError + mutation test 2`] = `
+Object {
+  "State mutated?": false,
 }
 `;
 

@@ -28,41 +28,6 @@ exports[`all cards test empty card should match the snapshot 1`] = `
 `;
 
 exports[`all cards test movie card should match the snapshot 1`] = `
-Object {
-  "children": Array [
-    <Logo />,
-    <div
-      className="movie-title"
-    >
-      test title
-    </div>,
-    <div
-      className="movie-data"
-    >
-      <div
-        className="animation"
-      >
-        this is a crawl
-      </div>
-    </div>,
-    <div
-      className="movie-data-bottom"
-    >
-      <div>
-        Director: 
-        BB-8
-         
-      </div>
-      <div>
-        1/1/1970
-         
-      </div>
-    </div>,
-  ],
-}
-`;
-
-exports[`all cards test movie card should match the snapshot 2`] = `
 <div>
   <Logo />
   <div

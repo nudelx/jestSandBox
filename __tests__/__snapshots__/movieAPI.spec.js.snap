@@ -6,7 +6,7 @@ Object {
 }
 `;
 
-exports[`testing movie API  should match the snapshot 1`] = `
+exports[`testing movie API  should match the snapshot  1`] = `
 Object {
   "created": "2014-12-10 14:23:31",
   "director": "BB-8",

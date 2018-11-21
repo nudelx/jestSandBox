@@ -27,7 +27,6 @@ describe('all cards test', () => {
   it('movie card should match the snapshot', () => {
     expect.addSnapshotSerializer(enzymeSerializer)
     const component = shallow(<MovieCard movie={movie} />)
-    expect(component.props()).toMatchSnapshot()
     expect(component).toMatchSnapshot()
   })
 
