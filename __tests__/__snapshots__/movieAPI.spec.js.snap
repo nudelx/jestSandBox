@@ -11,7 +11,7 @@ Object {
   "created": "2014-12-10 14:23:31",
   "director": "BB-8",
   "edited": "2015-04-11 09:46:52",
-  "episode_id": [Circular],
+  "episode_id": "test_1",
   "opening_crawl": "this is a test",
   "producer": "Kylo Ren",
   "release_date": "1977-05-25",
