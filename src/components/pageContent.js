@@ -16,7 +16,10 @@ const PageContent = ({ content, movies }) => {
         movies[content.currentPage].status === actionStatus.FETCHING ? (
           <LoadingCard />
         ) : (
-          // : <MovieCardWithPreview page={content.currentPage} movie={movies[content.currentPage]} />
+          // <MovieCardWithPreview
+          //   page={content.currentPage}
+          //   movie={movies[content.currentPage]}
+          // />
           <WithTrailerDynamic movie={movies[content.currentPage]}>
             {() => (
               <MovieCard
