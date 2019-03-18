@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component using the EventSystem it should subscribe on mount  1`] = `<div />`;
+
+exports[`component using the EventSystem it should subscribe on mount  2`] = `
+Array [
+  Array [
+    Object {
+      "type": "this is fucking ugly code !!!",
+    },
+  ],
+  Array [
+    ProductGallery {
+      "context": Object {},
+      "props": Object {},
+      "refs": Object {},
+      "setState": [Function],
+      "state": Object {
+        "desktop": true,
+        "images": undefined,
+        "productImageIndex": 0,
+        "videoId": undefined,
+        "videoPlaying": false,
+      },
+      "updater": Updater {
+        "_callbacks": Array [],
+        "_renderer": ReactShallowRenderer {
+          "_context": Object {},
+          "_element": <ProductGallery />,
+          "_forcedUpdate": false,
+          "_instance": [Circular],
+          "_newState": null,
+          "_rendered": <div />,
+          "_rendering": false,
+          "_updater": [Circular],
+        },
+      },
+      Symbol(enzyme.__setState__): [Function],
+    },
+    "Resize",
+  ],
+]
+`;
+
+exports[`mock test bla 1`] = `
+Array [
+  Array [
+    Object {
+      "type": "this is fucking ugly code !!!",
+    },
+  ],
+]
+`;
